@@ -30,9 +30,9 @@ const page = () => {
   return (
     <div>
       <div className="max-w-5xl mx-auto  px-4 py-32 flex items-center justify-between gap-12 ">
-        <div className="flex-col flex  gap-16">
-          <div className=" flex flex-col gap-8 w-110">
-            <h1 className="text-7xl text-medium text-dm-sans">
+        <div className="flex-col flex  gap-16 w-135 ">
+          <div className=" flex flex-col gap-8 w-full  ">
+            <h1 className="text-6xl text-medium text-dm-sans">
               Banking starts here.
             </h1>
             <p className="font-dm-sans">
@@ -58,7 +58,7 @@ const page = () => {
             </button>
           </div>
         </div>
-        <div className="">
+        <div className="hidden md:block">
           <Image
             src={"/cards/cards.png"}
             width={400}
@@ -68,19 +68,19 @@ const page = () => {
           />
         </div>
       </div>
-      <div className="max-w-5xl mx-auto  px-4 py-40 flex items-start justify-between gap-12">
-        <div className=" flex flex-col gap-16">
+      <div className="max-w-5xl mx-auto  px-4 py-40 flex items-start justify-between gap-12 ">
+        <div className=" flex flex-col gap-16 w-full ">
           <h2 className="font-medium text-6xl ">
             One app.
             <br /> One banking.
           </h2>
 
-          <div className="grid grid-cols-2 gap-8 items-center justify-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4  2xs:gap-8 items-center mx-auto lg:mx-0 justify-center bor w-full   lg:justify-start">
             {featureCards.map((card, i) => {
               const Icon = card.icon;
               return (
                 <div
-                  className="border-2 border-gray-500 rounded-2xl p-8 w-67 h-full flex flex-col gap-4"
+                  className="border-2 border-gray-500 rounded-2xl p-4 2xs:p-8 sm:w-67 md:w-full h-full flex flex-col gap-4"
                   key={i}
                 >
                   <Icon className="size-10 p-2 rounded-full bg-white/10" />
@@ -93,19 +93,19 @@ const page = () => {
             })}
           </div>
         </div>
-        <div className="">
+        <div className="hidden lg:block lg:w-180">
           <Image
             src={"/cards/app.jpg"}
             width={400}
             height={800}
             alt="phone app"
-            className=" rounded-[55px] h-200"
+            className=" rounded-[55px]  w-full h-200 sm:w-120"
           />
         </div>
       </div>
-      <div className="  px-4 py-32 h-170 overflow-hidden bg-primary-light text-black flex">
-        <div className="max-w-5xl mx-auto flex gap-12 items-start">
-          <div className="max-w-5xl mx-auto  flex flex-col items-start justify-between gap-12 ">
+      <div className="  px-4 sm:px-6 xl:px-4 py-32 lg:h-170 overflow-hidden bg-primary-light text-black flex">
+        <div className="max-w-5xl mx-auto flex lg:flex-row flex-col gap-12 items-start sm:items-center lg:items-start">
+          <div className="max-w-5xl mx-auto  flex flex-col items-start sm:items-center lg:items-start justify-between gap-12 sm:text-center lg:text-left ">
             <h3 className="text-5xl w-90 font-dm-sans">
               Send & receive money instantly
             </h3>
@@ -131,7 +131,7 @@ const page = () => {
               </p>
             </div>
           </div>
-          <div className=" ">
+          <div className=" hidden md:flex">
             <div className="flex flex-col gap-6 w-100">
               {purchases.map((prod, i) => (
                 <div
@@ -164,26 +164,26 @@ const page = () => {
         className="
       pt-40 w-full "
       >
-        <div className="max-w-5xl px-4 mx-auto flex flex-col gap-12">
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col gap-4 justify-start  w-120">
+        <div className="max-w-5xl px-4 sm:px-6 mx-auto flex flex-col gap-12">
+          <div className="flex gap-12 lg:flex-row flex-col items-center justify-between">
+            <div className="flex flex-col gap-4 justify-start  w-full tems-start xl:items-start  xl:w-120">
               <h6 className=" font-dm-sans text-xl  font-medium ">
                 Saving Account
               </h6>
-              <h3 className="text-5xl font-medium font-dm-sans">
+              <h3 className=" text-4xl xl:text-5xl font-medium font-dm-sans ">
                 Organize your money the right way
               </h3>
-              <p className="text-xl font-medium font-inter ">
+              <p className=" text-lg xl:text-xl font-medium font-inter ">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi
                 quae quam exercitationem.
               </p>
             </div>
 
-            <button className="text-primary mt-auto font-medium text-lg font-dm-sans flex gap-2 items-center  ">
+            <button className="text-primary   w-fit py-2 px-4 mr-auto xl:mt-auto font-medium text-lg font-dm-sans flex gap-2 items-center  ">
               All Features <ArrowRight className="size-4" />
             </button>
           </div>
-          <div className="w-full grid grid-cols-5 justify-between gap-6">
+          <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3  xl:grid-cols-5 justify-center  md:justify-between gap-6">
             {planningFeatures.map((plan, i) => (
               <div className="flex flex-col gap-4" key={i}>
                 <div
@@ -214,9 +214,9 @@ const page = () => {
       </div>
 
       <div className="pt-40">
-        <div className="max-w-5xl px-4 mx-auto flex  gap-12">
+        <div className="max-w-5xl px-4 sm:px-6 mx-auto flex flex-col xl:flex-row  gap-12">
           <div className="flex flex-col gap-10 items-start">
-            <div className="flex flex-col gap-4 justify-start  w-120">
+            <div className="flex flex-col gap-4 justify-start w-full  xl:w-120">
               <h6 className=" font-dm-sans text-xl  font-medium ">
                 Notifications
               </h6>
@@ -281,11 +281,11 @@ const page = () => {
       </div>
 
       <div className="py-40">
-        <div className="max-w-5xl mx-auto px-4 flex flex-col gap-12">
-          <div className="flex gap-4 items-center w-169 flex-wrap">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col gap-12">
+          <div className="flex gap-4 items-center w-full xl:w-169 flex-wrap">
             {partners.map((partner, i) => (
               <div
-                className="p-4 rounded-xl bg-gray-200 w-fit h-15 flex items-center"
+                className="p-3 xl:p-4 rounded-xl bg-gray-200 w-fit h-15 flex items-center"
                 key={i}
               >
                 <Image
@@ -298,8 +298,8 @@ const page = () => {
               </div>
             ))}
           </div>
-          <div className="flex gap-12  w-ful justify-between">
-            <div className="flex flex-col gap-4 justify-start  w-120">
+          <div className="flex gap-12 flex-col xl:flex-row  w-ful justify-between">
+            <div className="flex flex-col gap-4 justify-start w-full xl:w-120">
               <h6 className=" font-dm-sans text-xl  font-medium ">Tools</h6>
               <h3 className="text-5xl font-medium font-dm-sans w-80">
                 Seamless integration
@@ -330,9 +330,9 @@ const page = () => {
         </div>
       </div>
 
-      <div className="pt-40">
+      <div className="pt-25xl:pt-40">
         <div className="mx-auto max-w-lg px-4 flex flex-col gap-10">
-          <div className="flex flex-col gap-4 justify-center mx-auto  w-120 text-center">
+          <div className="flex flex-col gap-4 justify-center mx-auto w-full xl:w-120 text-center">
             <h6 className=" font-dm-sans text-xl  font-medium ">Account</h6>
             <h3 className="text-5xl font-medium font-dm-sans w-88 mx-auto text-pretty">
               Perfect card for your needs.
@@ -360,13 +360,13 @@ const page = () => {
         </div>
       </div>
       <div className="py-40">
-        <div className="max-w-5xl mx-auto flex flex-col gap-15">
-          <div className="flex gap-12 w-full justify-between">
-            <div className="flex flex-col gap-4 justify-start  w-139  text-start">
+        <div className="max-w-5xl mx-auto flex flex-col gap-15 px-4 xs:px-6 xl:px-4">
+          <div className="flex flex-col xl:flex-row gap-12 w-full justify-between">
+            <div className="flex flex-col gap-4 justify-start w-full  xl:w-139  text-start">
               <h6 className=" font-dm-sans text-xl  font-medium ">
                 Testimonials
               </h6>
-              <h3 className="text-6xl font-medium font-dm-sans  text-prett">
+              <h3 className="text-5xl xl:text-6xl font-medium font-dm-sans  text-prett">
                 People all over the world use banque.
               </h3>
             </div>
@@ -376,7 +376,7 @@ const page = () => {
               users
             </div>
           </div>
-          <div className=" columns-1 md:columns-2 lg:columns-3 justify-between gap-4 w-full ">
+          <div className=" columns-1 md:columns-2 lg:columns-3 justify-between gap-4 w-full  ">
             {testimonials.map((test, i) => (
               <TestimonialsCard
                 key={i}
@@ -391,11 +391,12 @@ const page = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl rounded-2xl bg-primary mx-auto px-19 py-24 flex gap-20 h-145 overflow-hidden">
+      <div className="max-w-5xl rounded-2xl bg-primary mx-auto px-4 sm:px-6 xl:px-19 py-24 flex flex-col xl:flex-row gap-20 xl:h-145 xl:overflow-hidden">
         <div className="flex flex-col gap-12">
-          <div className="flex flex-col gap-8 justify-start  w-110">
-            <h3 className="text-6xl font-medium font-dm-sans w-97">
-              One app. One banking
+          <div className="flex flex-col gap-8 justify-start  w-full xl:w-110">
+            <h3 className="text-5xl xl:text-6xl font-medium font-dm-sans w-full xl:w-97">
+              One app.
+              <br/> One banking
             </h3>
             <p className="text-lg font-medium font-inter ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -455,7 +456,7 @@ const page = () => {
             </button>
           </div>
         </div>
-        <div className="">
+        <div className="mx-auto lg:mx-0">
           <Image
             src={"/cards/app.jpg"}
             width={400}
@@ -466,7 +467,7 @@ const page = () => {
         </div>
       </div>
       <div className="py-40">
-        <div className="max-w-5xl mx-auto px-4 flex items-start gap-20 justify-between ">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 xl:px-4 flex flex-col  xl:flex-row items-start gap-20 justify-between ">
           <div className=" flex flex-col gap-12 ">
             <h2 className="font-dm-sans text-6xl">Need help?</h2>
             <div className=" flex flex-col gap-8">
@@ -492,7 +493,7 @@ const page = () => {
               Support <ArrowRight className="size-4 " />
             </button>
           </div>
-          <div className="w-1/2">
+          <div className=" w-full xl:w-1/2">
             {faq.map((question, i) => (
               <FaqCard
                 key={i}

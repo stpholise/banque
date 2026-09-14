@@ -12,7 +12,7 @@ interface FaqCardProps{
 const FaqCard = ({ index, question, answer }: FaqCardProps) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-b-gray-100 text-gray-100 py-8 w-full first:pt-0 last:border-b-0">
+    <div className="border-b border-b-gray-100 text-gray-100 py-8 first:py-0 last:border-b-0">
       <div onClick={() => {setOpen((currentState) => !currentState)}} className="flex justify-between gap-12 font-dm-sans ">
         <h4 className="text-xl font-medium font-dm-sans">{question} </h4>
         {open ? <X /> : <Plus />}
