@@ -15,7 +15,7 @@ const Header = () => {
         </div>
         <div className="xl:flex hidden justify-between gap-14 ">
           <div className=" w-full hidden xl:flex items-center gap-8 text-base">
-            <Link href={"/fearure cursor-pointer"}> Feature</Link>
+            <Link href={"/features"} className="cursor-pointer"> Feature</Link>
             <button className="flex items-center gap-1 cursor-pointer rounded-md py-2 px-3 bg-white/5">
               Compare <ChevronDown className="size-4 " />{" "}
             </button>
@@ -31,7 +31,7 @@ const Header = () => {
             <button className="text-shadow-primary text-lg cursor-pointer">
               Login
             </button>
-            <button className="bg-primary rounded-md font-medium text-base text-white py-3 px-4 cursor-pointer">
+            <button className="bg-primary rounded-md font-medium text-base text-white py-3 px-4 cursor-pointer whitespace-nowrap">
               Open Account
             </button>
           </div>

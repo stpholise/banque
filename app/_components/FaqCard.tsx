@@ -3,13 +3,12 @@ import { Plus, X } from "lucide-react";
 import { useState } from "react";
 import clsx from "clsx";
 
-interface FaqCardProps{
-  index: number;
+interface FaqCardProps{ 
   question: string;
   answer:string;
 }
 
-const FaqCard = ({ index, question, answer }: FaqCardProps) => {
+const FaqCard = ({  question, answer }: FaqCardProps) => {
   const [open, setOpen] = useState(false);
   return (
     <div className="border-b border-b-gray-100 text-gray-100 py-8 first:py-0 last:border-b-0">
