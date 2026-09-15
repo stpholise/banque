@@ -8,6 +8,7 @@ import ChooseCard from "../_components/cells/ChooseCard";
 import HelpSection from "../_components/cells/HelpSection";
 import Footer from "../_components/layout/Footer";
 import AllInOneSection from "../_components/cells/AllInOneSection";
+import CardTairWrapper from "../_components/cells/CardTairWrapper";
 
 const page = () => {
   return (
@@ -260,38 +261,7 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="py-40 max-w-6xl mx-auto lg:px-8 px-4 lg:grid-cols-3 grid gap-8 w-full">
-        <ChooseCard
-          title={"Basic"}
-          heading={"Free"}
-          text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-          imageUrl={"/cards/card_green.png"}
-          onClick={() => {
-            console.log("testing");
-          }}
-          tag={"Popular"}
-        />
-        <ChooseCard
-          title={"Premium"}
-          heading={"$5"}
-          text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-          imageUrl={"/cards/card_black.png"}
-          onClick={() => {
-            console.log("testing");
-          }}
-          duration={"per month"}
-        />
-        <ChooseCard
-          title={"Gold"}
-          heading={"$10"}
-          text={"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-          imageUrl={"/cards/card_brown.png"}
-          onClick={() => {
-            console.log("testing");
-          }}
-          duration={"per month"}
-        />
-      </div>
+      <CardTairWrapper />
       <AllInOneSection />
       <HelpSection />
       <Footer />

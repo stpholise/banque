@@ -1,7 +1,10 @@
+"use client"
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter()
   return (
     <div>
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-6 gap-15 ">
@@ -16,7 +19,7 @@ const Header = () => {
         <div className="xl:flex hidden justify-between gap-14 ">
           <div className=" w-full hidden xl:flex items-center gap-8 text-base">
             <Link href={"/features"} className="cursor-pointer"> Feature</Link>
-            <button className="flex items-center gap-1 cursor-pointer rounded-md py-2 px-3 bg-white/5">
+            <button onClick={() => router.push("/compare")} className="flex items-center gap-1 cursor-pointer rounded-md py-2 px-3 bg-white/5">
               Compare <ChevronDown className="size-4 " />{" "}
             </button>
             <Link href={"/support"} className="cursor-pointer">
