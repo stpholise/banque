@@ -7,17 +7,15 @@ import {
   Wifi,
   ChartLine,
   CreditCard,
-  Plus,
   Star,
-  Phone,
-  Mail,
 } from "lucide-react";
 import PryButton from "../_components/PryButton";
 import Image from "next/image";
 import clsx from "clsx";
 import TestimonialsCard from "./components/TestimonialsCard";
-import FaqCard from "@/app/_components/FaqCard";
 import Footer from "../_components/layout/Footer";
+import HelpSection from "../_components/cells/HelpSection";
+import AllInOneSection from "../_components/cells/AllInOneSection";
 
 type PlanningFeature = {
   name?: string;
@@ -32,7 +30,7 @@ const page = () => {
       <div className="max-w-5xl mx-auto  px-4 py-32 flex items-center justify-between gap-12 ">
         <div className="flex-col flex  gap-16 w-135 ">
           <div className=" flex flex-col gap-8 w-full  ">
-            <h1 className="text-6xl text-medium text-dm-sans">
+            <h1 className="text-6xl text-medium font-dm-sans">
               Banking starts here.
             </h1>
             <p className="font-dm-sans">
@@ -40,7 +38,7 @@ const page = () => {
               totam eius alias, dolor dolorum vel. Ut nam sit recusandae
               aperiam,
             </p>
-            <div className="grid grid-cols-2 max-w-sm gap-x-8 gap-y-4 justify-center text-white">
+            <div className="grid grid-cols-2 max-w-sm gap-x-8 gap-y-4 justify-center text-foreground ">
               {features.map((feature, i) => (
                 <div className="flex items-center gap-1" key={i}>
                   <Check className="rounded-full size-4.5 bg-white/10 p-0.5 text-primary" />{" "}
@@ -68,9 +66,9 @@ const page = () => {
           />
         </div>
       </div>
-      <div className="max-w-5xl mx-auto  px-4 py-40 flex items-start justify-between gap-12 ">
-        <div className=" flex flex-col gap-16 w-full ">
-          <h2 className="font-medium text-6xl ">
+      <div className="max-w-6xl mx-auto  px-4 py-40 flex items-start justify-between gap-12 ">
+        <div className=" flex flex-col lg-flex-row gap-16 w-full ">
+          <h2 className="font-medium text-6xl font-dm-sans ">
             One app.
             <br /> One banking.
           </h2>
@@ -116,17 +114,17 @@ const page = () => {
             <div className="flex flex-col gap-4">
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Malesuade Ipsum
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />
                 Vestibulum
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Parturient Lorem Ipsum
               </p>
             </div>
@@ -195,7 +193,7 @@ const page = () => {
                   {plan.emoji ? (
                     <span className="text-4xl ">{plan.emoji}</span>
                   ) : (
-                    <span className="text-4xl rounded-full bg-black text-white size-9  p-1 flex items-center justify-center">
+                    <span className="text-4xl rounded-full bg-background text-foreground  size-9  p-1 flex items-center justify-center">
                       {" "}
                       +
                     </span>
@@ -231,17 +229,17 @@ const page = () => {
               <div className="flex flex-col gap-4">
                 <p className="flex gap-2 items-center text-lg">
                   {" "}
-                  <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                  <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                   Malesuade Ipsum
                 </p>
                 <p className="flex gap-2 items-center text-lg">
                   {" "}
-                  <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />
+                  <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />
                   Vestibulum
                 </p>
                 <p className="flex gap-2 items-center text-lg">
                   {" "}
-                  <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                  <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                   Parturient Lorem Ipsum
                 </p>
               </div>
@@ -312,17 +310,17 @@ const page = () => {
             <div className="flex flex-col gap-4 mt-auto">
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Secure and encrypted integration
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />
                 Fully API interface
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Payment worldwide
               </p>
             </div>
@@ -391,120 +389,8 @@ const page = () => {
         </div>
       </div>
 
-      <div className="max-w-5xl rounded-2xl bg-primary mx-auto px-4 sm:px-6 xl:px-19 py-24 flex flex-col xl:flex-row gap-20 xl:h-145 xl:overflow-hidden">
-        <div className="flex flex-col gap-12">
-          <div className="flex flex-col gap-8 justify-start  w-full xl:w-110">
-            <h3 className="text-5xl xl:text-6xl font-medium font-dm-sans w-full xl:w-97">
-              One app.
-              <br/> One banking
-            </h3>
-            <p className="text-lg font-medium font-inter ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis consectetur nam eveniet dignissimos.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <p className="flex gap-2 items-center text-base">
-                {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-green-300 " />{" "}
-                Instant transactions
-              </p>
-              <p className="flex gap-2 items-center text-base">
-                {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-green-300 " />
-                Saving accounts
-              </p>
-              <p className="flex gap-2 items-center text-base">
-                {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-green-300 " />{" "}
-                Payments worldwide
-              </p>
-              <p className="flex gap-2 items-center text-base">
-                {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-green-300 " />{" "}
-                100% mobile banking
-              </p>
-            </div>
-          </div>
-          <div className=" flex gap-4">
-            <button className="flex items-center justify-center gap-2 bg-black/90 py-1.5 px-3 rounded-lg">
-              <Image
-                src="/cards/apple.png"
-                width={40}
-                height={40}
-                alt="Apple logo"
-                className="w-8 h-9"
-              />
-
-              <span className="flex flex-col justify-center items-start leading-none">
-                <span className="text-[10px]">Download on the</span>
-                <span className="text-lg leading-tight">App Store</span>
-              </span>
-            </button>
-            <button className="flex items-center justify-center gap-2 bg-black/90 py-1.5 px-3 rounded-lg">
-              <Image
-                src="/cards/apple.png"
-                width={40}
-                height={40}
-                alt="Apple logo"
-                className="w-8 h-9"
-              />
-
-              <span className="flex flex-col justify-center items-start leading-none">
-                <span className="text-[10px]">GET IT ON</span>
-                <span className="text-lg leading-tight">Google Play</span>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div className="mx-auto lg:mx-0">
-          <Image
-            src={"/cards/app.jpg"}
-            width={400}
-            height={800}
-            alt="phone app"
-            className=" w-95 border-black border rounded-[55px] h-200"
-          />
-        </div>
-      </div>
-      <div className="py-40">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 xl:px-4 flex flex-col  xl:flex-row items-start gap-20 justify-between ">
-          <div className=" flex flex-col gap-12 ">
-            <h2 className="font-dm-sans text-6xl">Need help?</h2>
-            <div className=" flex flex-col gap-8">
-              <div className="flex gap-6 items-center ">
-                <Phone className="text-primary bg-primary-light rounded-full size-10 p-1.5 " />
-                <div className="">
-                  <h5 className="font-medium text-lg leading-5">+4567809234</h5>
-                  <p className="text-gray-500 text-sm">Support Hotline</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6">
-                <Mail className="text-primary bg-primary-light rounded-full size-10 p-1.5" />
-                <div className="">
-                  <h5 className="font-medium text-lg leading-5">
-                    help@banque.com
-                  </h5>
-                  <p className="text-gray-500 text-sm">Support Email</p>
-                </div>
-              </div>
-            </div>
-            <button className="flex items-center gap-3 text-primary font-medium">
-              {" "}
-              Support <ArrowRight className="size-4 " />
-            </button>
-          </div>
-          <div className=" w-full xl:w-1/2">
-            {faq.map((question, i) => (
-              <FaqCard
-                key={i}
-                index={question.id}
-                question={question.question}
-                answer={question.answer}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <AllInOneSection />
+      <HelpSection />
       <Footer />
     </div>
   );
@@ -639,7 +525,7 @@ const notifications = [
   },
 ];
 
-const partners: string[] = [
+export const partners: string[] = [
   "/logo/webflow.png",
   "/logo/shopify.png",
   "/logo/zapier.png",
@@ -715,39 +601,6 @@ const testimonials = [
     text: "Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum. ",
     name: "Cody Fisher",
     occupation: "Medical Assistant",
-  },
-];
-
-const faq = [
-  {
-    id: 1,
-    question: "How do I open an Banque account?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium debitis iure asperiores quia deserunt, nostrum eligendi suscipit veritatis ipsam assumenda beatae voluptatem temporibus ducimus repellendus at doloribus, alias voluptas.",
-  },
-  {
-    id: 2,
-    question: "How do I order a new card?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium debitis iure asperiores quia deserunt, nostrum eligendi suscipit veritatis ipsam assumenda beatae voluptatem temporibus ducimus repellendus at doloribus, alias voluptas.",
-  },
-  {
-    id: 3,
-    question: "How to change my account limits?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium debitis iure asperiores quia deserunt, nostrum eligendi suscipit veritatis ipsam assumenda beatae voluptatem temporibus ducimus repellendus at doloribus, alias voluptas.",
-  },
-  {
-    id: 4,
-    question: "How does Banque premium works?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium debitis iure asperiores quia deserunt, nostrum eligendi suscipit veritatis ipsam assumenda beatae voluptatem temporibus ducimus repellendus at doloribus, alias voluptas.",
-  },
-  {
-    id: 5,
-    question: "Can I have two Banque accounts?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore accusantium debitis iure asperiores quia deserunt, nostrum eligendi suscipit veritatis ipsam assumenda beatae voluptatem temporibus ducimus repellendus at doloribus, alias voluptas. ",
   },
 ];
 
