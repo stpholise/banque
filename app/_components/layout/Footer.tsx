@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,49 +10,21 @@ const Footer = () => {
             banque
           </h3>
           <div className="flex justify-start flex-wrap  xs:justify-between  xl:justify-end gap-12  w-full  ">
-            <div className=" flex flex-col gap-4 items-start xl:w-40 ">
-              <h4 className="mb-3 text-white font-medium font-dm-sans text-xl">
-                About
-              </h4>
-              {about.map((item, i) => (
-                <button
-                  key={i}
-                  onClick={item.onClick}
-                  className="text-gray-400"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
-
-            <div className=" flex flex-col gap-4 items-start w-40">
-              <h4 className="mb-3 text-white font-medium font-dm-sans text-xl">
-                Webflow
-              </h4>
-              {webflow.map((item, i) => (
-                <button
-                  key={i}
-                  onClick={item.onClick}
-                  className="text-gray-400"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
-            <div className=" flex flex-col gap-4 items-start w-fit">
-              <h4 className="mb-3 text-white font-medium font-dm-sans text-xl">
-                Social Media
-              </h4>
-              {socialMedia.map((item, i) => (
-                <button
-                  key={i}
-                  onClick={item.onClick}
-                  className="text-gray-400"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
+            {navColumns.map((col, i) => (
+              <div
+                key={i}
+                className=" flex flex-col gap-4 items-start xl:w-40 "
+              >
+                <h4 className="mb-3 text-foreground font-medium font-dm-sans text-xl">
+                  {col.title}
+                </h4>
+                {col.items.map((item, i) => (
+                  <Link key={i} href={item.url} className="text-gray-400">
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
         <div className="py-6 flex justify-between">
@@ -72,46 +45,67 @@ const Footer = () => {
 const about = [
   {
     name: "Feature",
-    onClick: () => {},
+    url: "feature",
   },
   {
     name: "Pricing",
-    onClick: () => {},
+    url: "feature",
   },
   {
     name: "Support",
-    onClick: () => {},
+    url: "feature",
   },
 ];
 
 const webflow = [
   {
     name: "Styleguide",
-    onClick: () => {},
+    url: "feature",
   },
   {
     name: "Licensing",
-    onClick: () => {},
+    url: "feature",
   },
   {
     name: "Changelog",
-    onClick: () => {},
+    url: "feature",
   },
 ];
 
 const socialMedia = [
   {
     name: "Twitter",
-    onClick: () => {},
+    url: "feature",
   },
   {
     name: "Facebook",
-    onClick: () => {},
+    url: "feature",
   },
   {
     name: "Instagram",
-    onClick: () => {},
+    url: "feature",
   },
 ];
 
 export default Footer;
+
+const navColumns: {
+  title: string;
+  items: {
+    name: string;
+    url: string;
+  }[];
+}[] = [
+  {
+    title: "About",
+    items: about,
+  },
+  {
+    title: "Webflow",
+    items: webflow,
+  },
+  {
+    title: "Social media",
+    items: socialMedia,
+  },
+];

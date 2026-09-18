@@ -30,7 +30,7 @@ const page = () => {
       <div className="max-w-5xl mx-auto  px-4 py-32 flex items-center justify-between gap-12 ">
         <div className="flex-col flex  gap-16 w-135 ">
           <div className=" flex flex-col gap-8 w-full  ">
-            <h1 className="text-6xl text-medium text-dm-sans">
+            <h1 className="text-6xl text-medium font-dm-sans">
               Banking starts here.
             </h1>
             <p className="font-dm-sans">
@@ -38,7 +38,7 @@ const page = () => {
               totam eius alias, dolor dolorum vel. Ut nam sit recusandae
               aperiam,
             </p>
-            <div className="grid grid-cols-2 max-w-sm gap-x-8 gap-y-4 justify-center text-white">
+            <div className="grid grid-cols-2 max-w-sm gap-x-8 gap-y-4 justify-center text-foreground ">
               {features.map((feature, i) => (
                 <div className="flex items-center gap-1" key={i}>
                   <Check className="rounded-full size-4.5 bg-white/10 p-0.5 text-primary" />{" "}
@@ -68,7 +68,7 @@ const page = () => {
       </div>
       <div className="max-w-6xl mx-auto  px-4 py-40 flex items-start justify-between gap-12 ">
         <div className=" flex flex-col lg-flex-row gap-16 w-full ">
-          <h2 className="font-medium text-6xl ">
+          <h2 className="font-medium text-6xl font-dm-sans ">
             One app.
             <br /> One banking.
           </h2>
@@ -114,17 +114,17 @@ const page = () => {
             <div className="flex flex-col gap-4">
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Malesuade Ipsum
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />
                 Vestibulum
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Parturient Lorem Ipsum
               </p>
             </div>
@@ -193,7 +193,7 @@ const page = () => {
                   {plan.emoji ? (
                     <span className="text-4xl ">{plan.emoji}</span>
                   ) : (
-                    <span className="text-4xl rounded-full bg-black text-white size-9  p-1 flex items-center justify-center">
+                    <span className="text-4xl rounded-full bg-background text-foreground  size-9  p-1 flex items-center justify-center">
                       {" "}
                       +
                     </span>
@@ -229,17 +229,17 @@ const page = () => {
               <div className="flex flex-col gap-4">
                 <p className="flex gap-2 items-center text-lg">
                   {" "}
-                  <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                  <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                   Malesuade Ipsum
                 </p>
                 <p className="flex gap-2 items-center text-lg">
                   {" "}
-                  <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />
+                  <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />
                   Vestibulum
                 </p>
                 <p className="flex gap-2 items-center text-lg">
                   {" "}
-                  <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                  <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                   Parturient Lorem Ipsum
                 </p>
               </div>
@@ -310,17 +310,17 @@ const page = () => {
             <div className="flex flex-col gap-4 mt-auto">
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Secure and encrypted integration
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />
                 Fully API interface
               </p>
               <p className="flex gap-2 items-center text-lg">
                 {" "}
-                <Check className="size-5 p-0.5 rounded-full text-white bg-primary " />{" "}
+                <Check className="size-5 p-0.5 rounded-full text-foreground  bg-primary " />{" "}
                 Payment worldwide
               </p>
             </div>
@@ -389,7 +389,7 @@ const page = () => {
         </div>
       </div>
 
-     <AllInOneSection />
+      <AllInOneSection />
       <HelpSection />
       <Footer />
     </div>

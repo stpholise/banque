@@ -3,10 +3,10 @@ import { Check } from "lucide-react";
 
 const AllInOneSection = () => {
   return (
-    <div className="max-w-5xl rounded-2xl bg-primary mx-auto px-4 sm:px-6 xl:px-19 py-24 flex flex-col xl:flex-row gap-20 xl:h-145 xl:overflow-hidden">
+    <div className="max-w-5xl rounded-2xl bg-primary mx-auto px-4 sm:px-6 xl:px-19 py-12 lg:py-24 flex flex-col xl:flex-row gap-20  xl:h-145 xl:overflow-hidden text-primary-light">
       <div className="flex flex-col gap-12">
         <div className="flex flex-col gap-8 justify-start  w-full xl:w-110">
-          <h3 className="text-5xl xl:text-6xl font-medium font-dm-sans w-full xl:w-97">
+          <h3 className=" text-4xl md:text-5xl xl:text-6xl font-medium font-dm-sans w-full xl:w-97">
             One app.
             <br /> One banking
           </h3>
@@ -68,7 +68,7 @@ const AllInOneSection = () => {
           </button>
         </div>
       </div>
-      <div className="mx-auto lg:mx-0">
+      <div className="mx-auto lg:mx-0 lg:block hidden">
         <Image
           src={"/cards/app.jpg"}
           width={400}
