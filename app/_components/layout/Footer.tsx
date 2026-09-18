@@ -4,12 +4,12 @@ const Footer = () => {
   return (
     <div className="pb-12">
       <div className=" max-w-6xl mx-auto px-10  ">
-        <div className=" flex flex-row justify-between w-full px-1 gap-50 py-20  border-b-2 border-b-gray-500">
-          <h3 className="text-3xl w-80 font-medium font-dm-sans text-primary ">
+        <div className=" flex flex-col xl:flex-row  justify-between w-full px-1 gap-25 xl:gap-50 py-20  border-b-2 border-b-gray-500">
+          <h3 className="text-3xl xl:w-80 font-medium font-dm-sans text-primary ">
             banque
           </h3>
-          <div className="flex justify-end gap-12  w-full  px-4">
-            <div className=" flex flex-col gap-4 items-start w-40 ">
+          <div className="flex justify-start flex-wrap  xs:justify-between  xl:justify-end gap-12  w-full  ">
+            <div className=" flex flex-col gap-4 items-start xl:w-40 ">
               <h4 className="mb-3 text-white font-medium font-dm-sans text-xl">
                 About
               </h4>
