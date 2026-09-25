@@ -1,5 +1,5 @@
-import SideAccordion from "../_components/cells/SideAccordion";
-import Logo from "../_components/Logo";
+import SideAccordion from "../../_components/cells/SideAccordion";
+import Logo from "../../_components/Logo";
 
 const page = () => {
   return (
@@ -12,7 +12,6 @@ const page = () => {
               <SideAccordion items={items} />
             </div>
           </div>
-          
         </div>
         <div className="w-120"></div>
       </div>

@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import MoreQuestions from "../_components/cells/MoreQuestions";
-import Footer from "../_components/layout/Footer";
-import Accordion from "../_components/cells/Accordion";
+import MoreQuestions from "@/app/_components/cells/MoreQuestions";
+ import Accordion from "@/app/_components/cells/Accordion";
 import { CreditCard } from "lucide-react";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
@@ -112,8 +111,7 @@ const Page = () => {
           ))}
         </div>
       </div>
-
-      <Footer />
+ 
     </div>
   );
 };
