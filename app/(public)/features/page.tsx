@@ -1,13 +1,13 @@
 "use client";
-import PryButton from "../_components/PryButton";
-import SecButton from "../_components/SecButton";
+import PryButton from "@/app/_components/PryButton";
+import SecButton from "@/app/_components/SecButton";
 import Image from "next/image";
-import SectionIntro from "../_components/SectionIntro";
+import SectionIntro from "@/app/_components/SectionIntro";
 import { partners } from "../home/page";
-import HelpSection from "../_components/cells/HelpSection";
-import Footer from "../_components/layout/Footer";
-import AllInOneSection from "../_components/cells/AllInOneSection";
-import CardTairWrapper from "../_components/cells/CardTairWrapper";
+import HelpSection from "@/app/_components/cells/HelpSection";
+import Footer from "@/app/_components/layout/Footer";
+import AllInOneSection from "@/app/_components/cells/AllInOneSection";
+import CardTairWrapper from "@/app/_components/cells/CardTairWrapper";
 
 const page = () => {
   return (
@@ -76,9 +76,8 @@ const page = () => {
             All in one bank. Really.
           </h3>
           <p className="text-base md:text-lg font-inter w-90 ">
-            Senectus et netus et malesuada fames ac turpis.
-             
-            Sagittis vitae et leo duis ut diam
+            Senectus et netus et malesuada fames ac turpis. Sagittis vitae et
+            leo duis ut diam
           </p>
         </div>
 

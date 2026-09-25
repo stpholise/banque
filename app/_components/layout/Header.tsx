@@ -48,12 +48,18 @@ const Header = () => {
           </div>
 
           <div className=" w-full flex items-cente justify-end gap-8 ">
-            <button className="text-shadow-primary text-lg cursor-pointer">
+            <Link
+              href={"/login"}
+              className="text-shadow-primary flex items-center text-lg cursor-pointer"
+            >
               Login
-            </button>
-            <button className="bg-primary rounded-md font-medium text-base text-white py-3 px-4 cursor-pointer whitespace-nowrap">
+            </Link>
+            <Link
+              href={"/register"}
+              className="bg-primary rounded-md font-medium text-base text-white py-3 px-4 cursor-pointer whitespace-nowrap"
+            >
               Open Account
-            </button>
+            </Link>
           </div>
         </div>
         <button
@@ -109,11 +115,16 @@ const Header = () => {
               </button>
 
               <div className="flex flex-col justify-start items-start mt-10 gap-3 pt-4">
-                <button className="text-lg">Login</button>
+                <Link href={"/login"} className="text-lg">
+                  Login
+                </Link>
 
-                <button className="bg-primary-light text-primary rounded-md font-medium  py-3 px-4">
+                <Link
+                  href={"/register"}
+                  className="bg-primary-light text-primary rounded-md font-medium  py-3 px-4"
+                >
                   Open Account
-                </button>
+                </Link>
               </div>
             </nav>
           </div>

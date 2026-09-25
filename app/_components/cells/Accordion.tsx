@@ -3,12 +3,12 @@
 import { useState } from "react";
 import { Plus, X } from "lucide-react";
 
-interface AccordionItem {
+export interface AccordionItem {
   title: string;
   content: string;
 }
 
-interface AccordionProps {
+export interface AccordionProps {
   items: AccordionItem[];
 }
 

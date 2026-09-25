@@ -1,8 +1,8 @@
 import Image from "next/image";
-import CardTairWrapper from "../_components/cells/CardTairWrapper";
-import MoreQuestions from "../_components/cells/MoreQuestions";
-import Footer from "../_components/layout/Footer";
-import FeatureComparison from "../_components/cells/FeatureComparison";
+import CardTairWrapper from "@/app/_components/cells/CardTairWrapper";
+import MoreQuestions from "@/app/_components/cells/MoreQuestions";
+import Footer from "@/app/_components/layout/Footer";
+import FeatureComparison from "@/app/_components/cells/FeatureComparison";
 import {
   Check,
   PanelTop,

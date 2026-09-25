@@ -1,21 +1,21 @@
 import {
-  Check,
-  ArrowRight,
   Zap,
-  Vault,
+  ShieldCheck,
   Smartphone,
   Wifi,
   ChartLine,
   CreditCard,
   Star,
-} from "lucide-react";
-import PryButton from "../_components/PryButton";
+} from "@animateicons/react/lucide";
+import { Check, ArrowRight } from "lucide-react";
+
+import PryButton from "@/app/_components/PryButton";
 import Image from "next/image";
 import clsx from "clsx";
 import TestimonialsCard from "./components/TestimonialsCard";
-import Footer from "../_components/layout/Footer";
-import HelpSection from "../_components/cells/HelpSection";
-import AllInOneSection from "../_components/cells/AllInOneSection";
+import Footer from "@/app/_components/layout/Footer";
+import HelpSection from "@/app/_components/cells/HelpSection";
+import AllInOneSection from "@/app/_components/cells/AllInOneSection";
 
 type PlanningFeature = {
   name?: string;
@@ -81,7 +81,7 @@ const page = () => {
                   className="border-2 border-gray-500 rounded-2xl p-4 2xs:p-8 sm:w-67 md:w-full h-full flex flex-col gap-4"
                   key={i}
                 >
-                  <Icon className="size-10 p-2 rounded-full bg-white/10" />
+                  <Icon duration={0.6} className="size-10 p-2 rounded-full bg-white/10" />
                   <h5 className=" text-xl font-medium font-dm-sans ">
                     {card.head}
                   </h5>
@@ -410,7 +410,7 @@ const featureCards = [
     text: "Odio euismod lacinia at quis. Amet purus gravida quis blandit turpis.",
   },
   {
-    icon: Vault,
+    icon: ShieldCheck,
     head: "Saving accounts",
     text: "Odio euismod lacinia at quis. Amet purus gravida quis blandit turpis.",
   },
