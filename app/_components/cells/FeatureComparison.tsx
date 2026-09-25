@@ -33,8 +33,8 @@ const FeatureComparison = ({
   };
 
   return (
-    <div className="grid  [grid-template-areas:'header_header_header'_'side_center_end'] md:grid-cols-[minmax(200px,2fr)_minmax(100px,1fr)_minmax(100px,1fr)_minmax(100px,1fr)] lg:grid-cols-4 gap-4 items-center border-t py-5">
-      <div className="flex [grid-area:header] items-center gap-3">
+    <div className="grid  [grid-template-areas:'header_header_header'_'side_center_end'] md:[grid-template-areas:none] md:grid  md:grid-cols-[minmax(200px,2fr)_minmax(100px,1fr)_minmax(100px,1fr)_minmax(100px,1fr)] lg:grid-cols-4 gap-4 items-center border-t py-5">
+      <div className="flex [grid-area:header]  md:col-span-1 items-center gap-3">
         <Icon
           size={22}
           className="size-12 p-2.5 rounded-full bg-primary-light text-primary"
@@ -46,15 +46,15 @@ const FeatureComparison = ({
         </div>
       </div>
 
-      <div className="flex [grid-area:side] justify-center font-inter">
+      <div className="flex [grid-area:side]  md:col-span-1 justify-center font-inter">
         {renderValue(Free)}
       </div>
 
-      <div className="flex [grid-area:center] justify-center font-inter">
+      <div className="flex [grid-area:center]  md:col-span-1 justify-center font-inter">
         {renderValue(Premium)}
       </div>
 
-      <div className="flex [grid-area:end] justify-center font-inter">
+      <div className="flex [grid-area:end]  md:col-span-1 justify-center font-inter">
         {renderValue(Gold)}
       </div>
     </div>
